@@ -1,0 +1,61 @@
+.navbar {
+    background: linear-gradient(to right, rgb(50, 210, 250), rgb(148, 248, 101));
+    height: 100px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+img {
+    height: 100px;
+}
+
+a {
+    color: grey;
+    height: 50px;
+    padding-top: 8px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0;
+}
+
+a:hover {
+    background-color: rgba(101, 198, 255, 0.575);
+}
+
+.active {
+    color: grey;
+    background-color: rgba(72, 212, 255, 0.7);
+}
+
+.tog {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+
+/******************************side bar 2.0*****************************************/
+
+.sidebar {
+    background: rgb(255, 255, 255, .5);
+    color: white;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 0px;
+    transition: 0.5s;
+}
+
+.showsidebar {
+    width: 250px;
+}
+
+.hidesidebar {
+    width: 0px;
+}
