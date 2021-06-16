@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Tasks } from 'src/app/models/tasks';
 
 
@@ -13,16 +14,16 @@ export class TasksService {
 
   constructor(private http: HttpClient) { }
 
-  postTasks(task: Tasks) {
+  postTasks(task: Tasks): Observable<any> {
     const head: HttpHeaders = new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded',
       'Authorization': `Bearer ${this.token}`
     });
-
+    
     return this.http.post(`${this.apiUrl}/tasks`, task, {headers: head});
   }
 
-  getTasks() {
+  getTasks(): Observable<any> {
     const head: HttpHeaders = new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded',
       'Authorization': `Bearer ${this.token}`
@@ -31,7 +32,7 @@ export class TasksService {
     return this.http.get(`${this.apiUrl}/tasks`, {headers: head});
   }
 
-  getTask(id: number) {
+  getTask(id: number): Observable<any> {
     const head: HttpHeaders = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
     });
@@ -39,7 +40,7 @@ export class TasksService {
     return this.http.get(`${this.apiUrl}/tasks/${id}`, {headers: head});
   }
 
-  putTask(id: number, task:Tasks) {
+  putTask(id: number, task:Tasks): Observable<any> {
     const head: HttpHeaders = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
     });
@@ -47,7 +48,7 @@ export class TasksService {
     return this.http.put(`${this.apiUrl}/tasks/${id}`, task, {headers: head});
   }
 
-  delTask(id: number) {
+  delTask(id: number): Observable<any> {
     const head: HttpHeaders = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
     });
