@@ -23,8 +23,7 @@ export class NavbarComponent implements OnInit {
     else if(this.sideBar === false){
       document.getElementsByClassName('sidebar')[0].classList.remove('showsidebar');
       this.sideBar = true;
-    }
-    
- }
+    }  
+  }
 
 }

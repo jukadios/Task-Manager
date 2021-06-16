@@ -1,13 +1,16 @@
-<nav class="navbar navbar-expand-sm">
-    <div class="container-fluid w-100" style="height: 100px;">
+<nav class="navbar navbar-expand-sm container-fluid">
+    <div class=" w-100" style="height: 100px;">
 
         <div class="row">
-            <div class="col-4">
-                <button class="btn btn-outline-success tog me-5" type="button" data-bs-toggle="collapse" (click)="toggleSideBar()">
+            <div class="col-1">
+                <button class="btn btn-outline-success tog ms-3 mt-3" type="button" data-bs-toggle="collapse" (click)="toggleSideBar()">
                     <i class="fas fa-tasks"></i>
                 </button>
             </div>
-            <div class="col-8">
+            <div class="col-1 mt-2 animate__animated animate__fadeInDown">
+                <img src="../../../assets/Img/logo.webp">
+            </div>
+            <div class="col-4 title animate__animated animate__fadeInDown">
                 <h3>Task Manager</h3>
             </div>
         </div>
@@ -17,5 +20,5 @@
 
 <div class="d-flex animate__animated animate__fadeInLeft" class="sidebar">
     <a routerLink='add' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="list-group-item" style="padding-top: 8px;"><i class="fas fa-plus me-3"></i>Add Task</a>
-    <a routerLink='see' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="list-group-item" style="margin-top: 40px; padding-top: 8px;"><i class="far fa-eye me-3"></i>Provedores</a>
+    <a routerLink='see' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="list-group-item" style="margin-top: 40px; padding-top: 8px;"><i class="far fa-eye me-3"></i>Tasks</a>
 </div>

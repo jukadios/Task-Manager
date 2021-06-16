@@ -1,0 +1,12 @@
+select{
+    width: 100%;
+}
+
+.form-style{
+    border: 1px solid black;
+    font-family: 'Baloo2';
+    font-weight: 600;
+    font-size: large;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 20px;
+}
