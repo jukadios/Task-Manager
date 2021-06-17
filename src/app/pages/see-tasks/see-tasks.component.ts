@@ -23,6 +23,11 @@ export class SeeTasksComponent implements OnInit {
   getTasks(){
     this.serv.getTasks().subscribe(res => {
       this.tasks = res;
+      this.tasks.forEach(element => {
+        let split;
+        split = element.due_date.split(" ", 1);
+        element.due_date = split;
+      });
     });
   }
 
