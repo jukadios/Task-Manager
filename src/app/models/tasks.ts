@@ -1,8 +1,8 @@
 export interface Tasks {
-    Token: string;
+    id?: number;
+    token: string;
     title: string;
     is_completed: string;
-    // due_date?: Date;
     due_date?: string;
     comments?: string;
     description?: string;

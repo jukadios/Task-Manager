@@ -19,8 +19,17 @@ export class TasksService {
       'Content-Type': 'application/x-www-form-urlencoded',
       'Authorization': `Bearer ${this.token}`
     });
+
+    const par: HttpParams = new HttpParams()
+      .set('title', task.title)
+      .set('is_completed', task.is_completed)
+      .set('due_date', task.due_date)
+      .set('comments', task.comments)
+      .set('description', task.description)
+      .set('tags', task.tags)
+      .set('token', task.token);
     
-    return this.http.post(`${this.apiUrl}/tasks`, task, {headers: head});
+    return this.http.post(`${this.apiUrl}/tasks`, par, {headers: head});
   }
 
   getTasks(): Observable<any> {
@@ -29,30 +38,42 @@ export class TasksService {
       'Authorization': `Bearer ${this.token}`
     });
 
-    return this.http.get(`${this.apiUrl}/tasks`, {headers: head});
+    return this.http.get(`${this.apiUrl}/tasks?token=${this.token}`, {headers: head});
   }
 
   getTask(id: number): Observable<any> {
     const head: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
       'Authorization': `Bearer ${this.token}`
     });
 
-    return this.http.get(`${this.apiUrl}/tasks/${id}`, {headers: head});
+    return this.http.get(`${this.apiUrl}/tasks/${id}?token=${this.token}`, {headers: head});
   }
 
   putTask(id: number, task:Tasks): Observable<any> {
     const head: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
       'Authorization': `Bearer ${this.token}`
     });
 
-    return this.http.put(`${this.apiUrl}/tasks/${id}`, task, {headers: head});
+    const par: HttpParams = new HttpParams()
+      .set('title', task.title)
+      .set('is_completed', task.is_completed)
+      .set('due_date', task.due_date)
+      .set('comments', task.comments)
+      .set('description', task.description)
+      .set('tags', task.tags)
+      .set('token', task.token);
+
+    return this.http.put(`${this.apiUrl}/tasks/${id}`, par, {headers: head});
   }
 
   delTask(id: number): Observable<any> {
     const head: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
       'Authorization': `Bearer ${this.token}`
     });
 
-    return this.http.delete(`${this.apiUrl}/tasks//${id}?Token=${this.token}`, {headers: head});
+    return this.http.delete(`${this.apiUrl}/tasks/${id}?token=${this.token}` ,{headers: head});
   }
 }

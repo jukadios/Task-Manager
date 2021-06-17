@@ -1,0 +1,31 @@
+select{
+    width: 100%;
+}
+
+.form-style{
+    border: 1px solid black;
+    font-family: 'Baloo2';
+    font-weight: 600;
+    font-size: large;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 20px;
+}
+
+hr{
+    width: 80%;
+    border-top: 5px dashed rgb(0, 0, 0, 1);
+    color: transparent;
+    margin-left: 8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: blue;
+}

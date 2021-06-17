@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Tasks } from 'src/app/models/tasks';
 import { TasksService } from '../../services/tasks.service';
 import Swal from 'sweetalert2';
+import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 
 @Component({
   selector: 'app-add-task',
@@ -13,12 +14,11 @@ export class AddTaskComponent implements OnInit {
   task: Tasks = {
     title: '',
     is_completed: '',
-    // due_date: new Date,
     due_date: '',
     comments: '',
     description:'',
     tags:'',
-    Token: this.serv.token,
+    token: this.serv.token,
   };
 
   constructor(private serv: TasksService) {}
@@ -47,10 +47,10 @@ export class AddTaskComponent implements OnInit {
   }
 
   save() {
-    console.log(this.task);
+    // console.log(this.task);
     this.serv.postTasks(this.task).subscribe(
       res => {
-        console.log(res);        
+        console.log(res);
         Swal.fire({
           title: 'A new task was added',
           icon: 'success',
@@ -61,10 +61,24 @@ export class AddTaskComponent implements OnInit {
           hideClass: {
             popup: 'animate__animated animate__fadeOutUp'
           },
-          timer: 3000
+          timer: 1000
         });
       },
-      err => console.log(err)
+      err =>{
+        console.log("Error", err);
+        Swal.fire({
+          title: 'Somthing went wrong',
+          icon: 'error',
+          showConfirmButton: false,
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          },
+          timer: 1000
+        });
+      } 
     );
     this.clean();
   }

@@ -4,19 +4,25 @@
         <th scope="col">Title</th>
         <th scope="col">Is Done</th>
         <th scope="col">Date</th>
-        <th scope="col">Comments</th>
-        <th scope="col">Description</th>
-        <th scope="col">Tags</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
     </thead>
     <tbody>
-        <tr *ngFor="let item of tasks"  class="animate__animated animate__backInUp">
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+        <tr *ngFor="let task of tasks"  class="animate__animated animate__backInUp">
+            <th scope="row">{{task.id}}</th>
+            <td>{{task.title}}</td>
+            <td>{{task.is_completed}}</td>
+            <td>{{task.due_date}}</td>
+            <td class="p-0">
+                <button class="btn btn-outline-success" (click)="viewTask(task.id)" >
+                    <i class="far fa-edit"></i>
+                </button>
+            </td>
+            <td class="p-0">
+                <button class="btn btn-outline-danger" (click)="delTask(task)" >
+                    <i class="fas fa-eraser"></i>
+                </button>
+            </td>
         </tr>
     </tbody>
   </table>

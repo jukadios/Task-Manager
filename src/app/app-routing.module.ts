@@ -6,7 +6,7 @@ import { SeeTasksComponent } from './pages/see-tasks/see-tasks.component';
 
 const routes: Routes = [
   {path: 'add', component: AddTaskComponent},
-  {path: 'see', component: SeeTasksComponent},
+  {path: 'tasks', component: SeeTasksComponent},
   {path: 'see/:id', component: SeeTaskComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'add'}
 ];
