@@ -1,6 +1,6 @@
 /*Fondo altura y anchura de la navbar*/
 .navbar {
-    background: linear-gradient(to right, rgb(235, 210, 98), rgb(117, 241, 235));
+    background: linear-gradient(to right, rgb(235, 210, 98, .5), rgb(117, 241, 235, .8));
     height: 100%;
     width: 100%;
 }

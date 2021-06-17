@@ -11,6 +11,7 @@ select{
     font-size: large;
     box-shadow: 5px 5px 10px black;
     border-radius: 20px;
+    background-color: rgb(255, 255, 255, .8);
 }
 
 /* Estilo de la linea que separa el titulo del form */

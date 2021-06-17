@@ -28,6 +28,6 @@
 <div class="d-flex animate__animated animate__fadeInLeft" class="sidebar">
     <!-- Router link propiedad de angular para redireccionar, routerLinkActive es para que las epstañas esten activas al seleccionarlas -->
     <!-- RouterLinkAvctiveOptions para cambiar los colores de cuando esta seleccionado, list group clase de bootstrap, my margenes en el eje 'y' clase de bootstrap -->
-    <a routerLink='add' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="list-group-item my-2"><i class="fas fa-plus me-3"></i>Add Task</a>
-    <a routerLink='tasks' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="list-group-item my-2"><i class="far fa-eye me-3"></i>Tasks</a>
+    <a routerLink='add' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="list-group-item my-2" (click)="toggleSideBar(!sideBar)" ><i class="fas fa-plus me-3"></i>Add Task</a>
+    <a routerLink='tasks' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="list-group-item my-2" (click)="toggleSideBar(!sideBar)"><i class="far fa-eye me-3"></i>Tasks</a>
 </div>

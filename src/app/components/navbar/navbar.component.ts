@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   }
 
   //Esta funcion es para hacer la transicion de la navbar lateral
-  toggleSideBar() {
+  toggleSideBar(open?: boolean) {
 
     if(this.sideBar === true){
       //Se selecciona el elemento llamado sidebar y add es para mostrar la navbar
