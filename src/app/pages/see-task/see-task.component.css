@@ -1,7 +1,9 @@
+/* abarca toda la pantalla el select */
 select{
     width: 100%;
 }
 
+/* stilo del form, bordes, sombras, fuente del texto, tamaño de letra, etc */
 .form-style{
     border: 1px solid black;
     font-family: 'Baloo2';
@@ -11,6 +13,7 @@ select{
     border-radius: 20px;
 }
 
+/* Estilo de la linea que separa el titulo del form */
 hr{
     width: 80%;
     border-top: 5px dashed rgb(0, 0, 0, 1);
@@ -20,12 +23,14 @@ hr{
     margin-bottom: 0;
 }
 
+/* Estilo de el boton de regresar */
 a{
     font-size: 1.3rem;
     text-decoration: none;
     color: black;
 }
 
+/* color cuando pones el cursor encima de regresar */
 a:hover{
     color: blue;
 }

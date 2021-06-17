@@ -1,3 +1,4 @@
+// Interfaz del objeto para mejores practicas
 export interface Tasks {
     id?: number;
     token: string;

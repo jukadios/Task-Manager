@@ -1,20 +1,29 @@
+<!-- titulo con animacion y margen -->
 <div class="mb-3 d-flex animate__animated animate__fadeInLeft">
+    <!-- El router link nos regresa a la pagina anterior, tiene un icono de font awesome -->
     <a [routerLink]="['/tasks']"><p><i class="fas fa-chevron-left me-3"></i>Return</p></a> 
 </div>
 
+<!-- Clase form style propia, animacion de animated.css y ngForm es una propiedad de angular para formularios -->
 <div class="form-style animate__animated animate__fadeInUp" ngForm>
-
+    
+  <!-- clase de bootstrap para el padding  -->
     <h3 class="my-3 text-center ">Edit Task</h3>
+    <!-- linea de separacion -->
     <hr>
     <form class="p-3">
   
       <div class="form-group mb-3">
+        <!-- form-label clase de bootstrap -->
         <label class="form-label">Title</label>
+        <!-- clase de form control clase de bootstrap, el ngModel es para conectar con el objeto que tengo en ts y se necesita poneerle name -->
         <input type="text" class="form-control" name="titulo" [(ngModel)]="task.title" placeholder="Make Endopoits of ...." required>
       </div>
   
       <div class="form-group mb-3">
+        <!-- form-label clase de bootstrap -->
         <label class="form-label">Is Complete</label>
+        <!-- clase de form control clase de bootstrap, el ngModel es para conectar con el objeto que tengo en ts y se necesita poneerle name -->
         <select class="form-control" name="is_completed" [(ngModel)]="task.is_completed" required>
           <option>0</option>
           <option>1</option>
@@ -22,26 +31,35 @@
       </div>
   
       <div class="form-group mb-3">
+          <!-- form-label clase de bootstrap -->
           <label class="form-label">Due Date</label>
+          <!-- clase de form control clase de bootstrap, el ngModel es para conectar con el objeto que tengo en ts y se necesita poneerle name -->
           <input type="text" class="form-control" name="due_date" [(ngModel)]="this.task.due_date" placeholder="2020-12-06" required>
       </div>
   
       <div class="form-group mb-3">
+          <!-- form-label clase de bootstrap -->
           <label class="form-label">Comments</label>
+          <!-- clase de form control clase de bootstrap, el ngModel es para conectar con el objeto que tengo en ts y se necesita poneerle name -->
           <input type="text" class="form-control" name="comments" [(ngModel)]="task.comments" placeholder="This is for backend programmers...">
       </div>
   
       <div class="form-group mb-3">
+          <!-- form-label clase de bootstrap -->
           <label class="form-label">Description</label>
+          <!-- clase de form control clase de bootstrap, el ngModel es para conectar con el objeto que tengo en ts y se necesita poneerle name -->
           <input type="text" class="form-control" name="description" [(ngModel)]="task.description" placeholder="We need to make the endponints in whit ....">
       </div>
   
       <div class="form-group mb-3">
+          <!-- form-label clase de bootstrap -->
           <label class="form-label">Tags</label>
+          <!-- clase de form control clase de bootstrap, el ngModel es para conectar con el objeto que tengo en ts y se necesita poneerle name -->
           <input type="text" class="form-control" name="tags" [(ngModel)]="task.tags" placeholder="Priority, Back, Front, ...">
       </div>
   
       <div class="d-grid justify-content-center">
+          <!-- el boton outline es para que cuando pongas el cursor encima se rellene y llama al funcion edit -->
           <button type="button" class="btn btn-outline-success btn-lg" (click)="edit()">Edit task</button>
       </div>
   

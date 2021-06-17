@@ -1,7 +1,9 @@
+/* Elemento select para que abarque el ancho de la pantalla */
 select{
     width: 100%;
 }
 
+/* El estilo del form para, como el borde, la letra y la sombra de la caja */
 .form-style{
     border: 1px solid black;
     font-family: 'Baloo2';

@@ -1,15 +1,22 @@
+/*Fondo altura y anchura de la navbar*/
 .navbar {
     background: linear-gradient(to right, rgb(235, 210, 98), rgb(117, 241, 235));
     height: 100%;
     width: 100%;
-    border-radius: 20px 20px 20px 20px;
 }
 
+/*altura de la navbar*/
+.w-100{
+    height: 100px;
+}
+
+/*Altura y bordes redondos del logo*/
 img {
     height: 80px;
     border-radius: 20px;
 }
 
+/*Colore, altura, bordes, tamaños, alinamiento de las etiquetas a*/
 a {
     color: grey;
     height: 50px;
@@ -18,31 +25,34 @@ a {
     font-size: 20px;
     text-align: center;
     margin-top: 40px;
-    padding: 0;
 }
 
+/*Cuando el cursos esta sobre algun elemento del navbar el fondo cambia*/
 a:hover {
     background-color: rgba(101, 198, 255, 0.575);
 }
 
+/*cuando una pestaña esta activa el texto es color gris y el fondo azul*/
 .active {
     color: grey;
     background-color: rgba(72, 212, 255, 0.7);
 }
 
+/*Estilo del boton del navbar*/
 .tog {
     height: 50px;
     width: 50px;
     border-radius: 50px;
 }
 
+/* tipo de letra, tamaño y estilo del titulo */
 .title{
     font-family: 'Courgette';
     font-weight: bolder;
     margin-top: 1.8rem;
 }
 
-/******************************side bar 2.0*****************************************/
+/*transicion, posicion y otras propiedades del navbar*/
 
 .sidebar {
     background: rgb(255, 255, 255, .9);
@@ -55,13 +65,11 @@ a:hover {
     left: 0;
     overflow-x: hidden;
     padding-top: 0px;
-    transition: 0.5s;
+    transition: all 250ms ease-in-out;
+    -webkit-transition: all 1s;
 }
 
+/* anchura maxima de navbar */
 .showsidebar {
     width: 250px;
-}
-
-.hidesidebar {
-    width: 0px;
 }
