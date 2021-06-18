@@ -29,10 +29,10 @@ hr{
 a{
     font-size: 1.3rem;
     text-decoration: none;
-    color: black;
+    color: rgb(211, 211, 211);
 }
 
 /* color cuando pones el cursor encima de regresar */
 a:hover{
-    color: blue;
+    color: rgb(80, 155, 241);
 }
