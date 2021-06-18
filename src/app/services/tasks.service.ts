@@ -37,7 +37,7 @@ export class TasksService {
     
     /*Se usa el servicio http con el metodo que se va a usar y dentro la constante de la api,
     despues de mandan los parametros 
-    y al final los headers que ya se definieron anteriormente*/
+    // y al final los headers que ya se definieron anteriormente*/
     return this.http.post(`${this.apiUrl}/tasks`, par, {headers: head});
   }
 
