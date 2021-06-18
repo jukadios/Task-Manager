@@ -1,13 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 /*Imagen de fondo para que no se vea tan vacio*/
 .style{
-    background-image: url(./assets/Img/back1.webp);
+    background-image: url(./assets/Img/backgal.jpg);
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(201, 64, 0, 0.8)); */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Estilo de dondo de pie de pagina */
 .footer-basic {
     padding:5px 0;
-    background-color:#ffffff;
+    background-color:rgb(255, 255, 255, .8);
     color:#4b4c4d;
     width: 100%;
     position: fixed;
@@ -66,6 +69,7 @@ opacity:0.9;
 margin-top:15px;
 text-align:center;
 font-size:13px;
-color:#aaa;
+font-weight: bolder;
+color:rgb(0, 0, 0);
 margin-bottom:0;
 }
