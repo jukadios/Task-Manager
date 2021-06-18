@@ -1,5 +1,5 @@
 <!-- Clase form style propia, animacion de animated.css y ngForm es una propiedad de angular para formularios -->
-<div class="form-style animate__animated animate__fadeInUp" ngForm>
+<div class="form-style animate__animated animate__fadeInUp mb-5" ngForm>
 
   <!-- clase de bootstrap para el padding  -->
   <form class="p-3">
@@ -12,24 +12,26 @@
       <input type="text" class="form-control" name="titulo" [(ngModel)]="task.title" placeholder="Make Endopoits of ...." required>
     </div>
 
-    <!-- clase de form-group de bootstrap y mb margin inferior de bootstrap -->
-    <div class="form-group mb-3">
-      <!-- form-label clase de bootstrap -->
-      <label class="form-label">Is Complete</label>
-      <!-- clase de form control clase de bootstrap, el ngModel es para conectar con el objeto que tengo en ts y se necesita poneerle name -->
-      <select class="form-control" name="is_completed" [(ngModel)]="task.is_completed" required>
-        <option>0</option>
-        <option>1</option>
-      </select>
-    </div>
-
-    <!-- clase de form-group de bootstrap y mb margin inferior de bootstrap -->
-    <div class="form-group mb-3">
+    <div class="row">
+      <div class="col-6 form-group mb-3">
         <!-- form-label clase de bootstrap -->
-        <label class="form-label">Due Date</label>
+        <label class="form-label">Is Complete</label>
         <!-- clase de form control clase de bootstrap, el ngModel es para conectar con el objeto que tengo en ts y se necesita poneerle name -->
-        <input type="text" class="form-control" name="due_date" [(ngModel)]="this.task.due_date" placeholder="2020-12-06" required>
+        <select class="form-control" name="is_completed" [(ngModel)]="task.is_completed" required>
+          <option>0</option>
+          <option>1</option>
+        </select>
+      </div>
+  
+      <!-- clase de form-group de bootstrap y mb margin inferior de bootstrap -->
+      <div class="col-6 form-group mb-3">
+          <!-- form-label clase de bootstrap -->
+          <label class="form-label">Due Date</label>
+          <!-- clase de form control clase de bootstrap, el ngModel es para conectar con el objeto que tengo en ts y se necesita poneerle name -->
+          <input type="text" class="form-control" name="due_date" [(ngModel)]="this.task.due_date" placeholder="2020-12-06" required>
+      </div>
     </div>
+    <!-- clase de form-group de bootstrap y mb margin inferior de bootstrap -->
 
     <!-- clase de form-group de bootstrap y mb margin inferior de bootstrap -->
     <div class="form-group mb-3">

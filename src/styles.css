@@ -1,5 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
-
+/*Imagen de fondo para que no se vea tan vacio*/
 .style{
     background-image: url(./assets/Img/back1.webp);
+}
+
+/* Estilo de dondo de pie de pagina */
+.footer-basic {
+    padding:5px 0;
+    background-color:#ffffff;
+    color:#4b4c4d;
+    width: 100%;
+}
+
+/* Estilos de la lista general */
+.footer-basic ul {
+padding:0;
+list-style:none;
+text-align:center;
+font-size:18px;
+line-height:1.6;
+margin-bottom:0;
+}
+
+/* Estilos de cada link de la lista */
+.footer-basic ul a {
+color:inherit;
+text-decoration:none;
+opacity:0.8;
+}
+
+/* Estilo de cuando se pone el cursor arriba de un link */
+.footer-basic ul a:hover {
+opacity:1;
+}
+
+/* Acomodo de los iconos de redes sociales */
+.footer-basic .social {
+text-align:center;
+align-items: center;
+}
+
+/* Tamaño y estilo de letra de y forma en que se muestran los iconos de redes sociales */
+.footer-basic .social > a {
+font-size:24px;
+width:40px;
+height:40px;
+line-height:40px;
+display:inline-block;
+border-radius:50%;
+border:1px solid #ccc;
+margin:0 8px;
+color:inherit;
+opacity:0.75;
+}
+
+/* opacidad cuando se pone el cursor sobre un icono de redes sociales */
+.footer-basic .social > a:hover {
+opacity:0.9;
+}
+
+/* Estilos de el copyright del footer */
+.footer-basic .copyright {
+margin-top:15px;
+text-align:center;
+font-size:13px;
+color:#aaa;
+margin-bottom:0;
 }
