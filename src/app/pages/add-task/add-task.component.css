@@ -12,4 +12,5 @@ select{
     font-size: large;
     box-shadow: 5px 5px 10px black;
     border-radius: 20px;
+    margin-bottom: 8rem;
 }
